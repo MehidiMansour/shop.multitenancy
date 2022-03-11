@@ -1,0 +1,23 @@
+{
+    "name": "nwidart/dashboard",
+    "description": "",
+    "authors": [
+        {
+            "name": "Shop Design",
+            "email": "dzfreelancedevelopper@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Dashboard\\": ""
+        }
+    }
+}
