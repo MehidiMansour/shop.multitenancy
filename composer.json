@@ -15,6 +15,7 @@
         "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
         "laravelcollective/html": "^6.3",
+        "nwidart/laravel-modules": "^9.0",
         "spatie/laravel-multitenancy": "^2.0"
     },
     "require-dev": {
@@ -31,6 +32,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
+            "Modules\\": "Modules/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
