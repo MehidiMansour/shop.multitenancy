@@ -21,11 +21,12 @@ Route::group(['prefix' => ADMIN, 'as' => ADMIN . '.', 'middleware'=>['auth', 'Ro
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::middleware('tenant')->group(function() {
     // Tenant routes
-    Route::get('/host', function () {
-        return User::where('id',app('currentTenant')->id)->first();
-    });
+    // Route::get('/host', function () {
+    //     return User::where('id',app('currentTenant')->id)->first();
+    // });
     Route::get('/tenant', function () {
         return app('currentTenant');
     });

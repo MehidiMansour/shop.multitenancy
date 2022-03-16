@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,7 +12,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::prefix('dashboard')->group(function() {
-    Route::get('/', 'DashboardController@index');
+Route::group(["prefix"=>"V1/admin", 'middleware' => ['auth:sanctum', 'tenant']], function () {
+        Route::get('/', 'DashboardController@index');
+        Route::get('/user', function (Request $request) {
+            return view('welcome');
+        });
 });
